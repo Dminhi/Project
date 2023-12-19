@@ -1,0 +1,26 @@
+.admin-menu {
+    background-color: #1f1f1f;
+    width: 250px;
+    height: calc(100vh - 56px);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-menu-link {
+    color: #fff;
+    padding: 12px 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-account-menu-link:hover {
+    background-color: #4a4747;
+    border-radius: 4px;
+}
+
+.admin-menu .active {
+    background-color: #363535;
+    border-radius: 4px;
+}

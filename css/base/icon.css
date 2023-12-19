@@ -1,0 +1,35 @@
+.icon-size-16 {
+    background-image: url(../../assets/images/icon-prites.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+}
+
+.icon-size-24 {
+    background-image: url(../../assets/images/icon-prites.svg);
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+}
+
+.icon-size-36 {
+    background-image: url(../../assets/images/icon-prites.svg);
+    height: 36px;
+    width: 36px;
+    background-repeat: no-repeat;
+}
+
+.icon-size-48 {
+    background-image: url(../../assets/images/icon-prites.svg);
+    height: 48px;
+    width: 48px;
+    background-repeat: no-repeat;
+}
+
+.icon-search {
+    background-position: -426px -28px;
+}
+
+.icon-bell {
+    background-position: -258px -83px;
+}

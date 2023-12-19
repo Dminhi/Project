@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+</head>
+
+<body>
+    <div class="admin-container">
+        <header class="admin-account-header">
+            <div class="admin-account-header-left">
+                <i class="fa-solid fa-bars"></i>
+                <span>Quản trị viên</span>
+            </div>
+            <div class="admin-account-header-right">
+                <i class="fa-solid fa-bell"></i>
+                <img class="avata" src="https://fandom.vn/wp-content/uploads/2019/04/attack-on-titan-levi-ackerman-1.jpg" alt="" />
+                <span class="user-name">Nguyễn Duy Minh</span>
+
+                <div class="option-container">
+                    <i id="iconDropdown" class="fa-solid fa-chevron-down"></i>
+                    <ul id="listOption" class="list-option">
+                        <li class="option">
+                            <i class="fa-solid fa-id-card"></i> Thông tin cá nhân
+                        </li>
+                        <li class="option">
+                            <i class="fa-solid fa-key"></i> Đổi mật khẩu
+                        </li>
+                        <li class="option">
+                            <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="admin-main">
+            <menu class="admin-menu">MENU</menu>
+            <main class="admin-main-content">MAIN</main>
+        </div>
+    </div>
+    <script>
+        const iconDropdown = document.querySelector("#iconDropdown");
+        const listOption = document.querySelector("#listOption");
+
+        // Toggle listOption khi có click vào trong icon drop
+
+        iconDropdown.addEventListener("click", (e) => {
+            // Ngăn chặn sự kiện nổi bọt từ con lên cha
+            e.stopPropagation();
+            if (listOption.style.display === "block") {
+                listOption.style.display = "none";
+            } else {
+                listOption.style.display = "block";
+            }
+        });
+
+        const handleCloseElementWindown = (element) => {
+            window.addEventListener("click", () => {
+                if (element.style.display === "block") {
+                    element.style.display = "none";
+                }
+            });
+        };
+
+        handleCloseElementWindown(listOption);
+
+        // Khi click vào một nơi bất kỳ trên màn hình thì ẩn đi list option
+        // window.addEventListener("click", () => {
+        //     if (listOption.style.display === "block") {
+        //         listOption.style.display = "none";
+        //     }
+        // });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    <!-- <script type="module" src="../../utils/filebase.config.js"></script> -->
+    <script type="module" src="../../js/admin/category.js"></script>
+    <!-- <script type="module" src="../../js/admin/account.js"></script> -->
+</body>
+
+</html>

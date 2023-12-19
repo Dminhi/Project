@@ -1,0 +1,17 @@
+.btn-change-page {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-change-page button {
+  border: none;
+}
+
+.btn-increase,
+.btn-decrease {
+  height: 30px;
+  width: 20px;
+  line-height: 20px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}

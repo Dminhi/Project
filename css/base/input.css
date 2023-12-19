@@ -1,0 +1,17 @@
+.input {
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #dadada;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.input:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.input:focus {
+    border-color: blue;
+}

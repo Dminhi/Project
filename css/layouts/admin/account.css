@@ -1,0 +1,124 @@
+.admin-account-main {
+    display: flex;
+}
+
+.admin-account-content {
+    padding: 24px;
+    flex: 1;
+}
+
+.admin-account-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+}
+
+.admin-account-search {}
+
+.admin-account-search input {
+    width: 250px;
+}
+
+.admin-account-data {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* Form */
+
+.form-container {
+    background-color: #fff;
+    padding: 20px 24px;
+    border-radius: 10px;
+    width: 600px;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.fa-solid {}
+
+.fa-xmark {
+    cursor: pointer;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.emailError,
+.userError {
+    position: absolute;
+    bottom: -22px;
+    color: red;
+    font-size: 13px;
+    display: none;
+}
+
+.border-red {
+    border-color: red !important;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.list-radio {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+}
+
+.active {
+    background-color: aqua;
+}
+
+.flex {
+    display: flex;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#table-account tr,
+td,
+th {
+    border: 1px solid black !important;
+}

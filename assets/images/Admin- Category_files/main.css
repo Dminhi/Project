@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+/* Import các bass CSS */
+
+@import url(./base/button.css);
+@import url(./base/icon.css);
+@import url(./base/input.css);
+@import url(./base/reset.css);
+
+/* Import các layout CSS */
+
+@import url(./layouts/admin/category.css);
+@import url(./layouts/admin/home.css);
+@import url(./layouts/admin/header.css);
+@import url(./layouts/admin/menu.css);
+@import url(./layouts/admin/main-content.css);
+@import url(../css/layouts/admin/account.css);
+
+/* Reset Css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Noto Sans", sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+th {
+    height: 44px;
+    padding: 0 16px;
+}
+
+td {
+    height: 40px;
+    padding: 0 16px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input [type="radio"],
+input [type="checkbox"] {
+    height: 17px;
+    width: 17px;
+    cursor: pointer;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/layouts/user/cart.css" />
+  </head>
+
+  <body>
+    <header class="admin-account-header">
+      <div class="admin-account-header-left">
+        <i class="fa-solid fa-bars"></i>
+        <span>User</span>
+      </div>
+      <div class="admin-account-header-right">
+        <i class="fa-solid fa-bell"></i>
+        <img
+          class="avata"
+          src="https://fandom.vn/wp-content/uploads/2019/04/attack-on-titan-levi-ackerman-1.jpg"
+          alt=""
+        />
+        <span class="user-name">Nguyễn Duy Minh</span>
+
+        <div class="option-container">
+          <i id="iconDropdown" class="fa-solid fa-chevron-down"></i>
+          <ul id="listOption" class="list-option">
+            <li class="option">
+              <i class="fa-solid fa-id-card"></i> Thông tin cá nhân
+            </li>
+            <li class="option"><i class="fa-solid fa-key"></i> Đổi mật khẩu</li>
+            <li class="option">
+              <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-account-main">
+      <div class="admin-account-content">
+        <div class="admin-account-content">
+          <div class="admin-account-toolbar">
+            <h2>Giỏ hàng</h2>
+          </div>
+          <div class="admin-account-data">
+            <table style="width: 100%" border="1">
+              <thead>
+                <tr>
+                  <th>Stt</th>
+                  <th>Tên sản phẩm</th>
+                  <th>Ảnh</th>
+                  <th>Giá</th>
+                  <th>Số lượng</th>
+                  <th>Tổng giá</th>
+                  <th>Chức năng</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+
+            <div class="page">
+              <i class="fa-solid fa-arrow-left page-item" id="pre-page"></i>
+              <div class="piconage- btn-change-page" id="page-icon">
+                <span class="page-icon page-item">1</span>
+              </div>
+              <i class="fa-solid fa-arrow-right page-item" id="next-page"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Form thêm mới user -->
+
+    <div id="formAddProduct" class="overlay hidden">
+      <form action="" class="form-container" id="formProduct">
+        <div class="form-header">
+          <h3>Thêm mới sản phẩm</h3>
+          <i class="fa-solid fa-xmark" id="iconCloseForm"></i>
+        </div>
+        <div class="form-body-add-product" style="display: grid">
+          <div class="col-form-1">
+            <div class="form-group">
+              <label for="">Tên sản phẩm:</label>
+              <input id="name_product" type="text" class="input" />
+              <p class="userError" id="err-name">Tên không được để trống</p>
+              <p class="userError" id="err-same-name">
+                Tên đã bị trùng, đặt lại !!!
+              </p>
+            </div>
+            <div class="form-group">
+              <label for="">Giá:</label>
+              <input id="price_product" type="text" class="input" />
+            </div>
+            <div class="form-group">
+              <label for="input-file">Hình ảnh</label>
+              <input type="file" id="input-file" class="input" hidden />
+              <p class="userError" id="err-image">Ảnh không được để trống</p>
+              <div style="display: flex; justify-content: center">
+                <img id="preview-img" src="" width="100px" alt="img" />
+              </div>
+            </div>
+          </div>
+          <div class="col-form-2">
+            <div class="form-group">
+              <label for="">Số lượng:</label>
+              <input id="quantity_product" type="text" class="input" />
+              <!-- <p class="userError" id="err-name">Tên không được để trống</p>
+              <p class="userError" id="err-same-name">
+                Tên đã bị trùng, đặt lại !!!
+              </p> -->
+            </div>
+            <div class="form-group">
+              <label for="">Giảm giá:</label>
+              <input id="discount_product" type="text" class="input" />
+              <p class="userError" id="err-name">Tên không được để trống</p>
+              <p class="userError" id="err-same-name">
+                Tên đã bị trùng, đặt lại !!!
+              </p>
+            </div>
+            <div class="form-group">
+              <label for="">Danh mục</label>
+              <select class="input" name="" id="menu_product"></select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Chi tiết sản phẩm</label>
+          <input
+            id="detdetail_product"
+            type="text"
+            class="input"
+            style="width: 100%"
+          />
+        </div>
+        <div class="form-footer">
+          <button type="button" id="btnCloseForm" class="btn btn-primary">
+            Huỷ
+          </button>
+          <button id="btnSubmit" type="submit" class="btn btn-primary">
+            Thêm mới
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Accept del -->
+    <div class="dialog-del" id="dialog-del">
+      <p>Bạn có chắc muốn xoá?</p>
+      <div>
+        <button class="btn btn-primary" id="btn-oke-del">Đồng ý</button>
+        <button class="btn btn-primary" id="btn-no-del">Không</button>
+      </div>
+    </div>
+
+    <script>
+      const iconDropdown = document.querySelector("#iconDropdown");
+      const listOption = document.querySelector("#listOption");
+
+      // Toggle listOption khi có click vào trong icon drop
+
+      iconDropdown.addEventListener("click", (e) => {
+        // Ngăn chặn sự kiện nổi bọt từ con lên cha
+        e.stopPropagation();
+        if (listOption.style.display === "block") {
+          listOption.style.display = "none";
+        } else {
+          listOption.style.display = "block";
+        }
+      });
+
+      const handleCloseElementWindown = (element) => {
+        window.addEventListener("click", () => {
+          if (element.style.display === "block") {
+            element.style.display = "none";
+          }
+        });
+      };
+
+      handleCloseElementWindown(listOption);
+
+      // Khi click vào một nơi bất kỳ trên màn hình thì ẩn đi list option
+      // window.addEventListener("click", () => {
+      //     if (listOption.style.display === "block") {
+      //         listOption.style.display = "none";
+      //     }
+      // });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    <!-- <script type="module" src="../../utils/filebase.config.js"></script> -->
+    <script type="module" src="../../js/users/cart.js"></script>
+    <!-- <script type="module" src="../../js/admin/account.js"></script> -->
+  </body>
+</html>

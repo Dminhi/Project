@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Login and Signup Form</title>
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/layouts/user/login.css" />
+</head>
+
+<body>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+                <form>
+                    <div class="field input-field">
+                        <input type="email" id="loginEmail" placeholder="Your email" class="input" />
+                        <p class="hidden text-error" id="errorAccount">
+                            Email hoặc mật khẩu không đúng
+                        </p>
+                    </div>
+
+                    <div class="field input-field">
+                        <input id="loginPassWord" type="password" placeholder="Password" class="password" />
+                        <i class="bx bx-hide eye-icon"></i>
+                    </div>
+
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <button onclick="login()" type="button">Login</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Don't have an account?
+              <a href="#" class="link signup-link">Signup</a></span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Signup Form -->
+
+      <div class="form signup">
+        <div class="form-content">
+          <header>Sign up</header>
+
+          <form>
+            <div class="field input-field">
+              <input
+                type="text"
+                id="inputFullName"
+                placeholder="Họ và tên"
+                class="input"
+              />
+              <p class="hidden text-error" id="errorFullName">
+                Tên không phù hợp
+              </p>
+              <p class="hidden text-error" id="errorSameName">
+                Tên đã bị trùng
+              </p>
+            </div>
+
+            <div class="field input-field">
+              <input
+                type="text"
+                id="inputPhoneNumber"
+                placeholder="Số điện thoại"
+                class="input"
+              />
+              <p class="hidden text-error" id="errorPhoneNumber">
+                Số điện thoại không phù hợp
+              </p>
+            </div>
+
+            <div class="field input-field">
+              <input
+                type="text"
+                id="inputEmail"
+                placeholder="Email"
+                class="input"
+              />
+              <p class="hidden text-error" id="errorEmail">
+                Email không phù hợp
+              </p>
+            </div>
+
+            <div class="field input-field">
+              <input
+                type="date"
+                placeholder="Ngày sinh"
+                id="inputDateOfBirth"
+                class="input"
+              />
+              <p class="hidden text-error" id="errorDateOfBirth">
+                Ngày tháng năm sinh không phù hợp
+              </p>
+            </div>
+
+            <div class="form-label">
+              <label class="form-gender-label" for="">Giới tính:</label>
+              <div class="list-radio" style="margin-top: 0">
+                <div class="radio-group">
+                  <input
+                    checked
+                    value="0"
+                    name="gender"
+                    id="Male"
+                    type="radio"
+                  />
+                  <label for="male">Nam</label>
+                </div>
+
+                <div class="radio-group">
+                  <input value="1" name="gender" id="female" type="radio" />
+                  <label for="female">Nữ</label>
+                </div>
+
+                <div class="radio-group">
+                  <input value="2" name="gender" id="other" type="radio" />
+                  <label for="other">Khác</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="field input-field">
+              <input
+                id="inputPassword"
+                type="password"
+                placeholder="Create password"
+                class="password"
+              />
+              <p class="hidden text-error" id="errorPassword">
+                Ít nhất 6 ký tự, có chữ hoa, số
+              </p>
+            </div>
+
+            <div class="field input-field">
+              <input
+                id="inputConfirm"
+                type="password"
+                placeholder="Confirm password"
+                class="password"
+              />
+              <i class="bx bx-hide eye-icon"></i>
+              <p class="hidden text-error" id="errorConfirmPassword">
+                Xác nhận lại mật khẩu
+              </p>
+            </div>
+
+            <div class="field button-field">
+              <button type="button" id="Signup">Sign up</button>
+            </div>
+          </form>
+
+          <div class="form-link">
+            <span>
+              Already have an account?
+              <a href="#" class="link login-link">Login</a>
+            </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    <script src="../../js/users/login.js"></script>
+</body>
+
+</html>

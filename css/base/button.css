@@ -1,0 +1,22 @@
+.btn {
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007aff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #3395ff;
+}
+
+.btn-primary:focus {
+    background-color: #0062cc;
+}
